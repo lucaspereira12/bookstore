@@ -17,7 +17,7 @@ services:
     ports:
       - 5433:5432
     volumes:
-      - pg-data:/var/lib/postgresql/data/
+      - postgres_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=bookstore_dev
       - POSTGRES_PASSWORD=bookstore_dev
@@ -29,5 +29,5 @@ networks:
     driver: bridge
 
 volumes:
-  pg-data:
+  postgres_data:
   app_data:
