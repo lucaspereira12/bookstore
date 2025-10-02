@@ -30,7 +30,8 @@ COPY poetry.lock pyproject.toml ./
 RUN poetry install --only main
 RUN poetry install
 
-RUN pip install whitenoise
+# Instalação do whitenoise sem cache
+RUN pip install --no-cache-dir whitenoise
 
 # Copia o restante do projeto
 WORKDIR /app/
